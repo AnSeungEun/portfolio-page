@@ -141,8 +141,8 @@ body {
 }
 /* 메인 이미지 */
 .works_preview {
-  position :relative;
-  overflow:hidden;
+  position: relative;
+  overflow: hidden;
   z-index: -1;
   float: left;
   width: 50%;

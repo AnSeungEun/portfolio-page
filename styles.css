@@ -1,0 +1,141 @@
+:root{
+    --nav-color: #f5faff;
+    --ham-color: #7eb9cd;
+}
+body { 
+  margin: 0;
+  background-color: #f3f2f2;
+}
+/* 내비 */
+    nav{
+      z-index: 5;
+      position: fixed;
+}
+    .navbar {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(to top, #7eb9cd,#5081a3 10%);
+      padding: 8px 12px;
+}
+    .navbar__menu {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding-left: 0;
+}
+    .navbar__menu li {
+      padding: 8px 30px;
+      transition: 0.3s cubic-bezier(0.000, 0.000, 0.005, 0.980);
+}
+    .navbar__menu li:hover {
+      border-radius: 3px;
+      background-color: #7eb9cd;
+}
+
+    .navbar a {
+  text-decoration: none;
+  color: var(--nav-color);
+}
+    .navbar__logo i {
+  padding-left: 0;
+  color: var(--nav-color);
+}
+    .navbar__icons {
+  list-style: none;
+  display: flex;
+  color: #7eb9cd;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 3%;
+}
+    .navbar__icons li {
+  padding: 8px 12px;
+  margin: 0;
+}
+    .navbar__icons a{
+    color: #7eb9cd;
+    transition: color 0.3s cubic-bezier(0.000, 0.000, 0.005, 0.980);
+    }
+    .navbar__icons a:hover{
+    color: var(--nav-color);
+    }
+    .navbar__toggleBtn {
+    display: none;
+}
+    .navbar__toggleBtn i{
+    color: var(--ham-color);
+    transition: color 0.3s cubic-bezier(0.000, 0.000, 0.005, 0.980);
+}
+    .navbar__toggleBtn i:hover{
+  color: var(--nav-color);
+}
+/* 내비 모바일 */
+@media screen and (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+  }
+  .navbar__menu {
+    display: none;
+    margin-top: 3px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .navbar__icons {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+    .navbar__menu.active, .navbar__icons.active{
+        display: flex;
+    }
+  .navbar__menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar__toggleBtn {
+  display: flex;
+  color: var(--ham-color);
+  position: absolute;
+  right: 20px;
+  padding-right: 3%;
+  font-size: 20px;
+}
+}
+
+
+/* 타이틀 이미지 */
+.title_cover {
+  background-image: linear-gradient(to top, #121222BB 30%, #ffffff33 70%),url('https://cdn.pixabay.com/photo/2019/04/25/14/43/workplace-4155023_1280.jpg');
+  background-size: 100%;
+  object-fit: cover;
+  width: 100%;
+  aspect-ratio: 16/9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 타이틀 텍스트 */
+.content {
+  z-index: 1;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20%;
+  margin-right: 50%;
+}
+.content span {
+  color: white;
+}
+.content span:nth-child(1) {
+  font-size: 36px;
+  font-weight: bold;
+}
+.content span:nth-child(2) {
+  font-size: 24px;
+}

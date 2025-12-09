@@ -139,3 +139,41 @@ body {
 .content span:nth-child(2) {
   font-size: 24px;
 }
+/* 메인 이미지 */
+.works_preview {
+  position :relative;
+  overflow:hidden;
+  z-index: -1;
+  float: left;
+  width: 50%;
+  height: 500px;
+}
+.works_preview img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s cubic-bezier(0.000, 0.000, 0.005, 0.980);
+}
+.works_preview img:hover{
+    transform:scale(1.1);
+}
+.works_desc{
+  position: absolute;
+  top: 400px;
+  z-index: 2;
+  height: 100px;
+  width: 100%;
+  background-color: #f5faff;
+}
+.works_desc span{
+  position: relative;
+  display: block;
+  width: 100%;
+  left: 3%;
+}
+.works_desc span:first-child{
+  color: #5081a3;
+}
+.works_desc span:nth-child(2){
+  font-size: 36px;
+}

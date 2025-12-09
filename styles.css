@@ -54,6 +54,7 @@ body {
   padding: 8px 12px;
   margin: 0;
 }
+
     .navbar__icons a{
     color: #7eb9cd;
     transition: color 0.3s cubic-bezier(0.000, 0.000, 0.005, 0.980);
@@ -62,6 +63,8 @@ body {
     color: var(--nav-color);
     }
     .navbar__toggleBtn {
+    border: none;
+    background-color: transparent;
     display: none;
 }
     .navbar__toggleBtn i{
